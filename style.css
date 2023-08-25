@@ -1,0 +1,285 @@
+
+html body {
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    align-content: center;
+    background-color: rgb(0, 65, 29);
+    color: white;
+    border: 0px;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    
+}
+
+.header-name {
+    align-self: flex-start;
+    display: flex;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+nav {
+    display: flex;
+    text-align: right;
+    align-items: center;
+    margin-right: 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+a:hover {
+    color:rgb(3, 110, 114);
+    cursor: pointer;
+}
+
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 300px;
+    overflow: hidden;
+    background-color: white;
+
+}
+
+.logo-container img {
+    max-width: 50%;
+    object-fit: cover;
+
+}
+
+div h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: grey
+}
+
+.business-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 20px;
+    margin: 0px;
+}
+
+
+.milktea-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    min-height: 800px;
+    padding: 30px;
+    border-bottom: 2px solid rgb(212, 22, 149);
+}
+
+.cart-container {
+    height: 200px;
+    margin: auto;
+    max-width: 800px;
+
+}
+
+.cart-header {
+    font-size: 3em;
+    text-align: center;
+}
+
+.cart-column {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgb(212, 22, 149);
+    padding-bottom: 10px;
+    margin-right: 1.5em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    margin-left: 1.5em;
+}
+
+.remove-column {
+    width: 25%;
+}
+
+.cart-quantity {
+    width: 50px;
+    height: 40px;
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-quantity {
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 15%;
+}
+
+.button-add {
+    background-color: rgb(8, 122, 8);
+}
+
+.button-remove {
+    background-color: rgb(234, 79, 79);
+}
+.cart-item {
+    font-size: 1em;
+    width: 45%;
+    text-align: center;
+    padding-bottom: 0px;
+}
+
+.cart-item-image {
+    width: 15%;
+    margin-bottom: 1em;
+    border-radius: 15%;
+}
+
+.cart-item-price {
+    margin-right: 10px;
+}
+
+.cart-item-flavor {
+    margin-left: -1.1em;
+}
+
+.total-price {
+    margin-right: 2em;
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-align: end;
+    padding-bottom: 2em;
+
+}
+
+
+/* 
+.first-background {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* background-image: url(images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply; */
+}
+
+.second-background {
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(images/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+}
+
+.third-background {
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(images/bg4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply; */
+
+}
+
+.milktea-container img {
+    width: 300px;
+    height: auto;
+    z-index: 1;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.5s ease-in-out, filter 0.3s ease;
+    border-radius: 30px;
+    position: relative;
+    margin: 50px;
+    border: 2px solid white;
+    margin-bottom: 10px;
+   
+  
+}
+
+.milktea-container img:active {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+    opacity: 1.0;
+    z-index: 1;
+
+}
+
+
+.milktea-label {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 280px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color:rgb(63, 63, 63);
+    font-size: 1.5em;
+}
+
+.item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-price {
+    text-align: center;
+    font-size: 2em;
+    color:rgb(116, 116, 116);
+
+}
+
+ 
+.button-design {
+    background-color: rgb(10, 238, 238);
+    border: 2px solid white;
+    margin-top: 5px;
+    transition: transform 0.3s ease;
+    height: 50px;
+    font-size: 20px;
+}
+
+.button-design:hover {
+    background-color: rgb(22, 161, 161);
+    cursor: pointer;
+}
+
+.button-design:active {
+    transform: scale(1.1);
+}
