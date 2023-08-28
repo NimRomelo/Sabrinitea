@@ -1,185 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabrinitea Escalante</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="store.js" async></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sabrinitea Escalante</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="store.js" async></script>
+    </head>
 
-<body>
-    <header>
-        <p class="header-name">Sabrinitea Escalante</p>
-        <nav>
-            <ul>
-                <li>
-                    <a>About</a>
-                </li>
-                <li>
-                    <a>Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="logo-container">
-        <img class="logo-container" src="images/carl-frost.jpg">
-        <h1>X</h1>
-        <img class="logo-container"src="images/logo.jpg">
-    </div>
-    <div>
-        <p class="business-description">We are a small business delivering delicious milk tea refreshments, snacks, and
-            more!
-        </p>
-  
-    <div class="milktea-container">
-        <div class="item-container">
-            <div>
-                <img src="images/ube-halaya.jpg" alt="ube halaya milktea">
-                <p class="milktea-label">Ube Halaya</p>
-            </div>
-            <div class="item-price">
-                <span>Price:</span>
-                <span> Php 80</span>
-                <button class="milktea-label button-design">
-                    Add to Cart
-                </button>
-            </div>
-        </div>
-        <div class="item-container">
-            <div>
-                <img src="images/mango-bravo.jpg">
-                <p class="milktea-label">Mango Bravo</p>
-            </div>
-            <div class="item-price">
-                <span>Price:</span>
-                <span> Php 80</span>
-                <button class="milktea-label button-design">
-                    Add to Cart
-                </button>
-            </div>
-        </div>
-        <div class="item-container">
-            <div>
-                <img src="images/strawberry-ice.jpg">
-                <p class="milktea-label">Stawberry Ice</p>
-            </div>
-            <div class="item-price">
-                <span>Price:</span>
-                <span> Php 80</span>
-                <button class="milktea-label button-design">
-                    Add to Cart
-                </button>
-            </div>
-        </div>
-        <div class="item-container">
-            <div>
-                <img src="images/oreo-cheese.jpg">
-                <p class="milktea-label">Oreo Cheese</p>
-            </div>
-            <div class="item-price">
-                <span>Price:</span>
-                <span> Php 80</span>
-                <button class="milktea-label button-design">
-                    Add to Cart
-                </button>
-            </div>
-        </div>
-    </div>
+    <body>
 
-    <!-- this section is for the cart items -->
+        <header>
+            <p class="header-name">Sabrinitea Escalante</p>
+            <nav>
+                <ul>
+                    <li>
+                        <a>About</a>
+                    </li>
+                    <li>
+                        <a>Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-    <section class="cart-container">
-        <h2 class="cart-header">Cart</h2>
-        <!-- column labels -->
-        <div class="cart-column">
-            <span class="cart-item">Item</span>
-            <span class="cart-item">Flavor</span>
-            <span class="cart-item">Price</span>
-            <span class="cart-item">Quantity</span>
+
+        <div class="logo-container">
+            <img class="logo-container" src="images/carl-frost.jpg">
+            <h1>X</h1>
+            <img class="logo-container"src="images/logo.jpg">
         </div>
-        <!-- checking layout of items added -->
-        <div class="cart-column">
-            <img class="cart-item-image" src="images/ube-halaya.jpg">
-            <span class="cart-item-flavor">Ube Halaya</span>
-            <span class="cart-item-price">Php 80</span>
-            <div class="quantity">
-                <input class="cart-quantity" type="number" value="1">
-                <div>
-                    <button class="button-quantity button-add">Add</button>
-                    <button class="button-quantity button-remove">Remove</button>
+
+
+        <div>
+            <p class="business-description">We are a small business delivering delicious milk tea refreshments, snacks, and
+                more!
+            </p>
+        </div>
+
+        <!-- this section is for items -->
+        <section>
+            <div class="milktea-container">
+                <!-- every item should be under this div -->
+
+                <div class="item-container">
+                    <div>
+                        <img src="images/ube-halaya.jpg" alt="ube halaya milktea">
+                        <p class="milktea-label">Ube Halaya</p>
+                    </div>
+                    <div class="item-price">
+                        <span> Php 80</span>
+                        <button class="milktea-label button-design">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="item-container">
+                        <div>
+                            <img src="images/mango-bravo.jpg">
+                            <p class="milktea-label">Mango Bravo</p>
+                        </div>
+                        <div class="item-price">
+                            <span> Php 80</span>
+                            <button class="milktea-label button-design">
+                                Add to Cart
+                            </button>
+                        </div>
+                </div>
+
+                <div class="item-container">
+                    <div>
+                        <img src="images/strawberry-ice.jpg">
+                        <p class="milktea-label">Stawberry Ice</p>
+                    </div>
+                    <div class="item-price">
+                        <span> Php 80</span>
+                        <button class="milktea-label button-design">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="images/oreo-cheese.jpg">
+                        <p class="milktea-label">Oreo Cheese</p>
+                    </div>
+                    <div class="item-price">
+                        <span> Php 80</span>
+                        <button class="milktea-label button-design">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+        </section>
+
+        <!-- this section is for the cart items -->
+
+        <section class="cart-container">
+
+            <h2 class="cart-header">Cart</h2>
+
+            <!-- column labels -->   
+            <div class="cart-column">
+                <span class="cart-item">Item</span>
+                <span class="cart-item">Flavor</span>
+                <span class="cart-item">Price</span>
+                <span class="cart-item">Quantity</span>
+            </div>
+
+            <!-- checking layout of items added-->
+            <!-- <div class="cart-item-row">
+                <img class="cart-item-image" src="images/ube-halaya.jpg">
+                <span class="cart-item-flavor">Ube Halaya</span>
+                <span class="cart-item-price">Php 80</span>
+                <div class="quantity">
+                    <input class="cart-quantity" type="number" value="1">
+                    <div>
+                        <button class="button-quantity button-add">Add</button>
+                        <button class="button-quantity button-remove">Remove</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- total purchase price -->
-        <div class="total-price">
-            <strong>Total</strong>
-            <span>Php 0</span>
-        </div>
 
-    </section>
-    
-    <!-- <div class="milktea-container second-background">
-        <div>
-            <img src="images/ube-halaya.jpg" alt="ube halaya milktea">
-            <p class="milktea-label">Ube Halaya</p>
-            <button class="milktea-label button-design">
-                Add to Cart
-            </button>
-        </div>
-        <div>
-            <img src="images/blue-vanilla.jpg" alt="blue vanilla milktea">
-            <p class="milktea-label">Blue Vanilla</p>
-            <button class="milktea-label button-design">
-                Add to Cart
-            </button>
-        </div>
-        <div>
-            <img src="images/mango-bravo.jpg" alt="mango bravo milktea">
-            <p class="milktea-label">Mango Bravo</p>
-            <button class="milktea-label button-design">
-                Add to Cart
-            </button>
-        </div>
-        <div>
-            <img src="images/oreo-cheese.jpg" alt="oreo cheese milktea">
-            <p class="milktea-label">Oreo Cheese</p>
-            <button class="milktea-label button-design">
-                Add to Cart
-            </button>
-        </div>
-    </div>
-    <div class="milktea-container third-background">
-        <div>
-            <img src="images/ube-halaya.jpg" alt="ube halaya milktea">
-            <p class="milktea-label">Ube Halaya</p>
-            <button class="milktea-label button-design">
-                Add to Cart
-            </button>
-        </div>
-        <div>
-            <img src="images/blue-vanilla.jpg" alt="blue vanilla milktea">
-            <p class="milktea-label">Blue Vanilla</p>
-            <button class="milktea-label button-design">
-                Add to Cart
-            </button>
-        </div>
-        <div>
-            <img src="images/mango-bravo.jpg" alt="mango bravo milktea">
-            <p class="milktea-label">Mango Bravo</p>
-            <button class="milktea-label button-design">
-                Add to Cart
-            </button>
-        </div>
-        <div>
-            <img src="images/oreo-cheese.jpg" alt="oreo cheese milktea">
-            <p class="milktea-label">Oreo Cheese</p>
-            <button class="milktea-label button-design">
-                Add to Cart
-            </button>
-        </div>
-    </div> -->
-</body>
+            <div class="cart-item-row">
+                <img class="cart-item-image" src="images/ube-halaya.jpg">
+                <span class="cart-item-flavor">Ube Halaya</span>
+                <span class="cart-item-price">Php 80</span>
+                <div class="quantity">
+                    <input class="cart-quantity" type="number" value="1">
+                    <div>
+                        <button class="button-quantity button-add">Add</button>
+                        <button class="button-quantity button-remove">Remove</button>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- new items added should go here, before the total price -->
+
+            
+        </section>
+
+
+      <!-- total purchase price -->
+        <section class="total-price">
+            <strong>Total</strong>
+            <span id="total-price">Php 0</span>
+        </section>
+      
+        
+        
+        
+    </body>
 
 </html>
