@@ -25,12 +25,13 @@ let quantityInputs = document.getElementsByClassName("cart-quantity")
         // console.log(input)
     }
 
+}
+
 let addQuantity = document.getElementsByClassName("button-add")
     for (let i=0; i<addQuantity.length; i++) {
         let button = addQuantity[i]
-        button.addEventListener("click", console.log())
+        button.addEventListener("click", addButtonClicked)
     }
-}
 
 
 // variable declarations with eventListeners
@@ -49,6 +50,26 @@ function removeButtonClicked(event) {
     updateCartTotal()
 
 }
+
+function addButtonClicked(event) {
+
+    let buttonClicked = event.target
+    let cartRowQuantity = buttonClicked.parentElement.previousElementSibling
+    console.log(cartRowQuantity)
+    //this code will apply to all items in the cart, how do i apply this
+    //to only one cart row?
+    let cartContainer = document.getElementsByClassName("cart-container")[0]
+    let cartRow = cartContainer.getElementsByClassName("cart-item-row")[0]
+    let cartQuantity = cartRow.getElementsByClassName("cart-quantity")
+
+    newCartRowQuantity = parseInt(cartRowQuantity.value) + 1
+
+    cartRowQuantity.value = newCartRowQuantity
+
+    updateCartTotal()
+}
+
+
 
 //for updating cart total price
 function updateCartTotal() {
@@ -129,6 +150,8 @@ function updateCartItems (itemImage, itemFlavor, itemPrice) {
     newCartRow.getElementsByClassName("button-remove")[0].addEventListener("click",
     removeButtonClicked)
     newCartRow.getElementsByClassName("cart-quantity")[0].addEventListener("change", quantityChanged)
+    newCartRow.getElementsByClassName("button-add")[0].addEventListener("click", addButtonClicked)
+    
 
 }
 
@@ -145,10 +168,3 @@ function quantityChanged(event) {
 // function addButtonClicked(event) {
 //     let added = event.target
 //     console.log(added)
-    
-
-
-
-
-
-

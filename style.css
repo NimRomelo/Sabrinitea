@@ -19,7 +19,6 @@ html, body {
 
 header {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     align-content: center;
@@ -45,9 +44,8 @@ header {
 
 nav {
     display: flex;
-    text-align: right;
+    text-align: center;
     align-items: center;
-    margin-right: 20px;
     color: rgb(255, 255, 255);
     min-width: 0px;
 }
@@ -55,10 +53,9 @@ nav {
 ul {
     list-style: none;
     display: flex;
-    align-items: center;
-    gap: 1em;;
-    min-width: 0px;
-    font-size: 1.5em;
+    gap: 1em;
+    font-size: 1.3em;
+    justify-content: flex-start;
 }
 
 a:hover {
@@ -80,7 +77,7 @@ a:hover {
 
 .logo-container img {
     max-width: 50%;
-    object-fit: cover;
+    /* object-fit: cover; */
 
 }
 
@@ -88,7 +85,7 @@ a:hover {
 
 div h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size:2em;
     color: grey
 }
 
@@ -96,12 +93,12 @@ div h1 {
     display: flex;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    font-size: 1.4em;
     text-align: center;
     background-color: antiquewhite;
     padding: 20px;
     margin: 0px;
-    width: 100%;
+    max-width: 800px;
 }
 
 
@@ -294,6 +291,7 @@ div h1 {
 .cart-quantity {
     font-size: 1em;
     text-align: center;
+    border: 0px;
 }
 
 /* styles for add and remove button */
@@ -322,7 +320,14 @@ div h1 {
     border-radius: 50%;
 }
 
+.button-add:hover {
+    background-color: rgb(61, 102, 121);
+}
 
+.button-remove:hover {
+    background-color: rgb(158, 69, 69);
+
+}
 /* styles for total price */
 
 .total-price {
