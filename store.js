@@ -44,7 +44,7 @@ let addQuantity = document.getElementsByClassName("button-add")
 // for removing cart items
 function removeButtonClicked(event) {
     let buttonClicked = event.target
-    buttonClicked.parentElement.parentElement.parentElement.remove()
+    buttonClicked.parentElement.parentElement.remove()
     // console.log(buttonClicked)
     updateCartTotal()
 
@@ -79,15 +79,10 @@ function updateCartTotal() {
 //defining the variables to be used in injecting new cart items
 function addToCartClicked (event) {
     let buttonClicked = event.target
-    // console.log(buttonClicked)
     let cartItem = buttonClicked.parentElement.parentElement
-    // console.log(cartItem)
     let itemImage = cartItem.querySelector("img").src
-    // console.log(itemImage)
     let itemFlavor = cartItem.querySelector("p").innerText
-    // console.log(itemFlavor)
     let itemPrice = cartItem.querySelector("span").innerText
-    // console.log(itemPrice)
 
     updateCartItems(itemImage, itemFlavor, itemPrice)
     updateCartTotal()   
@@ -100,6 +95,7 @@ function updateCartItems (itemImage, itemFlavor, itemPrice) {
     let newCartRow = document.createElement("div")
     let cartItems = document.getElementsByClassName("cart-container")[0]
     let itemFlavorName = cartItems.getElementsByClassName("cart-item-flavor")
+
 
     //add if statement to check if item is already listed
     for (let i=0; i<itemFlavorName.length; i++) {
@@ -114,16 +110,14 @@ function updateCartItems (itemImage, itemFlavor, itemPrice) {
 
     //this is the html of the new cart item
     let newCartRowContents = `
-        <img class="cart-item-image" src=${itemImage}>
-        <span class="cart-item-flavor">${itemFlavor}</span>
-        <span class="cart-item-price">${itemPrice}</span>
-        <div class="quantity">
-            <input class="cart-quantity" type="number" value="1">
-            <div>
+            <img class="cart-item-image row-items" src=${itemImage}>
+            <span class="cart-item-flavor row-items">${itemFlavor}</span>
+            <span class="cart-item-price row-items">${itemPrice}</span>
+            <input class="cart-quantity row-items" type="number" value="1">
+            <div class="button-container row-items">
                 <button class="button-quantity button-add">Add</button>
                 <button class="button-quantity button-remove">Remove</button>
-            </div>
-        </div>`
+            </div>`
 
     //this injects the newCartRowContents html in the created div
     newCartRow.innerHTML = newCartRowContents
