@@ -45,10 +45,18 @@ let addQuantity = document.getElementsByClassName("button-add")
 // for removing cart items
 function removeButtonClicked(event) {
     let buttonClicked = event.target
-    buttonClicked.parentElement.parentElement.remove()
-    // console.log(buttonClicked)
-    updateCartTotal()
+    let quantityValue = buttonClicked.parentElement.previousElementSibling.value
+    console.log(quantityValue)
+    if (quantityValue < 2) {
+        // buttonClicked.parentElement.parentElement.remove()
+        // console.log(buttonClicked)
+        // alert("Confirm Remove Item?")
+        buttonClicked.parentElement.parentElement.remove()
+        updateCartTotal()
+    } else {
+    removeButtonDecrement (event)}
 
+    updateCartTotal()
 }
 
 function addButtonClicked(event) {
@@ -56,17 +64,32 @@ function addButtonClicked(event) {
     let buttonClicked = event.target
     let cartRowQuantity = buttonClicked.parentElement.previousElementSibling
     console.log(cartRowQuantity)
-    //this code will apply to all items in the cart, how do i apply this
-    //to only one cart row?
-    let cartContainer = document.getElementsByClassName("cart-container")[0]
-    let cartRow = cartContainer.getElementsByClassName("cart-item-row")[0]
-    let cartQuantity = cartRow.getElementsByClassName("cart-quantity")
+    
+    // let cartContainer = document.getElementsByClassName("cart-container")[0]
+    // let cartRow = cartContainer.getElementsByClassName("cart-item-row")[0]
+    // let cartQuantity = cartRow.getElementsByClassName("cart-quantity")
+    // console.log(cartQuantity.value)
 
     newCartRowQuantity = parseInt(cartRowQuantity.value) + 1
 
     cartRowQuantity.value = newCartRowQuantity
 
     updateCartTotal()
+}
+
+function removeButtonDecrement(event) {
+    
+    let buttonClicked = event.target
+    console.log(buttonClicked)
+    let quantity = buttonClicked.parentElement.previousElementSibling
+    // console.log(quantity)
+    newQuantity = parseInt(quantity.value) - 1
+    console.log(newQuantity)
+
+    quantity.value = newQuantity
+        
+    
+  
 }
 
 
